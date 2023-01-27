@@ -3,7 +3,7 @@ import css from './App.module.css';
 import { Notification } from './notification/Notification';
 import { Section } from './section/Section';
 import { FeedbackOptions } from 'components/feedbackOptions/FeedbackOptions.jsx';
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Statistics from 'components/statistics/Statistics.jsx';
 
 export default function App() {
@@ -12,16 +12,18 @@ export default function App() {
   const [bad, setBad] = useState(0);
 
   const onButtonClick = e => {
+    console.log(e.target.name);
     const { name } = e.target;
     switch (name) {
       case 'good':
         setGood(prevState => prevState + 1);
         break;
-
       case 'neutral':
         setNeutral(prevState => prevState + 1);
+        break;
       case 'bad':
         setBad(prevState => prevState + 1);
+        break;
       default:
         return;
     }
