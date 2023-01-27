@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  padding: 0;
+}
+.item {
+  list-style: none;
+}
+button {
+  height: 30px;
+  display: inline-block;
+  width: 90px;
+  border: 2px solid #a26856;
+  background-color: #c89a8b69;
+  color: #a26856;
+  font-weight: bold;
+  border-radius: 15px;
+}
